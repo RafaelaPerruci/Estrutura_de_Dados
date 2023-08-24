@@ -73,6 +73,18 @@ print(fibonacci)
 
 #8
 
+print("Vamos descobrir se um número é primo.")
+num = int(input("Digite um número inteiro: ")) 
+
+divisores = 0
+for i in range(1, num +1):
+    if num % i == 0:
+        divisores += 1
+if divisores == 2:
+    print("É primo!")
+else: 
+    print("Não é primo!")
+
 #9
 nomes = ["amanda", "ana", "luciana", "rafaela", "carol"]
 nomes_a = []
