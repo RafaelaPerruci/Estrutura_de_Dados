@@ -35,8 +35,3 @@ class Pilha:
             print("A pilha está vazia. Não há itens para imprimir.")
 
 pi = Pilha() 
-pi.empilhar(8)
-pi.empilhar(6)
-pi.empilhar(12)
-pi.empilhar(4) 
-print(pi.tamanho())
