@@ -13,7 +13,9 @@ a.	Qual seria a ordem de impressão caso fosse aplicado o algoritmo de pré-orde
 b.	Qual seria a ordem de impressão caso fosse aplicado o algoritmo de pós-ordem? A/C/B/E/F/G/D
 c.	Qual seria a ordem de impressão caso fosse aplicado o algoritmo de in-ordem? A/B/C/D/E/F/G
 
-3.
+3. Compare a eficiência dos algoritmos de ordenação Bubble
+Sort, Selection Sort e Quick Sort para as seguintes quantidades de elementos, apresente numa tabela o tempo para cada registro:
+
 vetor = [random.randint(1, 1000) for _ in range(1000)] 
 0.0932011604309082 # Tempo de Execução Bubble Sort
 0.043439626693725586 # Tempo de Execução Select Sort
@@ -62,7 +64,7 @@ arvore_genealogica = BinaryTree(raiz)
 print("Árvore Genealógica:")
 arvore_genealogica.imprimir_arvore(arvore_genealogica.raiz)
 
-5. . Considere uma árvore binária que representa uma expressão matemática, onde cada nó é um operador ou um número. Veja a árvore abaixo e responda as questões abaixo: 
+5. Considere uma árvore binária que representa uma expressão matemática, onde cada nó é um operador ou um número. Veja a árvore abaixo e responda as questões abaixo: 
 
 a. Em qual ordem é a mais adequada para a leitura dessa expressão? Pré-ordem, Pós-ordem ou
 in-ordem? Percurso IN-ORDEN
