@@ -1,0 +1,63 @@
+1. Diante da seguinte estrutura de árvore abaixo, responda as questões: 
+a.	Qual o número de nós? 10
+b.	Qual é a altura? 3
+c.	Qual é o nó raiz? H
+d.	Quais os nós folha? A/C/J/L/M/N
+e.	Quais os nós interiores? B/F/E
+f.	Quais os nós no nível 2? A/C/J/E
+g.	Quais os nós antepassados de E? F/H
+h.	Quais os nós descendentes de F? J/E/L/M/N 
+
+2. Diante da seguinte estrutura de árvore binária abaixo, responda as questões: 
+a.	Qual seria a ordem de impressão caso fosse aplicado o algoritmo de pré-ordem? D/B/A/C/F/E/G
+b.	Qual seria a ordem de impressão caso fosse aplicado o algoritmo de pós-ordem? A/C/B/E/F/G/D
+c.	Qual seria a ordem de impressão caso fosse aplicado o algoritmo de in-ordem? A/B/C/D/E/F/G
+
+3.
+vetor = [random.randint(1, 1000) for _ in range(1000)] 
+0.0932011604309082 # Tempo de Execução Bubble Sort
+0.043439626693725586 # Tempo de Execução Select Sort
+0.0017096996307373047 # Tempo de Execução Quick Sort
+
+vetor = [random.randint(1, 1000) for _ in range(10000)] 
+11.11726713180542 # Tempo de Execução Bubble Sort
+4.272993326187134 # Tempo de Execução Select Sort
+0.01416015625 # Tempo de Execução Quick Sort 
+
+vetor = [random.randint(1, 1000) for _ in range(100000)] 
+11.11726713180542 # Tempo de Execução Bubble Sort
+4.272993326187134 # Tempo de Execução Select Sort
+0.01416015625 # Tempo de Execução Quick Sort 
+
+4. Imagine uma árvore binária representando uma árvore genealógica. Cada nó possui informações sobre um membro da família. Desenvolva um código em Python para criar e imprimir essa árvore.
+class Node:
+    def __init__(self, nome):
+        self.nome = nome
+        self.filho_esquerda = None
+        self.filho_direita = None
+
+class BinaryTree:
+    def __init__(self, raiz):
+        self.raiz = raiz
+
+    def imprimir_arvore(self, node, nivel=0, direcao=None):
+        if node:
+            print(" " * nivel * 4 + f"{direcao}-- {node.nome}")
+            self.imprimir_arvore(node.filho_esquerda, nivel + 1, "E")
+            self.imprimir_arvore(node.filho_direita, nivel + 1, "D")
+
+# Criando a árvore genealógica
+raiz = Node("Avô")
+raiz.filho_esquerda = Node("Pai")
+raiz.filho_direita = Node("Tio")
+raiz.filho_esquerda.filho_esquerda = Node("Você")
+raiz.filho_esquerda.filho_direita = Node("Irmão")
+raiz.filho_direita.filho_esquerda = Node("Primo")
+raiz.filho_direita.filho_direita = Node("Prima")
+
+# Criando a árvore binária
+arvore_genealogica = BinaryTree(raiz)
+
+# Imprimindo a árvore genealógica
+print("Árvore Genealógica:")
+arvore_genealogica.imprimir_arvore(arvore_genealogica.raiz)
