@@ -25,9 +25,9 @@ vetor = [random.randint(1, 1000) for _ in range(10000)]
 0.01416015625 # Tempo de Execução Quick Sort 
 
 vetor = [random.randint(1, 1000) for _ in range(100000)] 
-11.11726713180542 # Tempo de Execução Bubble Sort
-4.272993326187134 # Tempo de Execução Select Sort
-0.01416015625 # Tempo de Execução Quick Sort 
+1224.4459121227264 # Tempo de Execução Bubble Sort
+579.9916379451752 # Tempo de Execução Select Sort
+0.15275168418884277 # Tempo de Execução Quick Sort 
 
 4. Imagine uma árvore binária representando uma árvore genealógica. Cada nó possui informações sobre um membro da família. Desenvolva um código em Python para criar e imprimir essa árvore.
 class Node:
